@@ -21,6 +21,8 @@ eval $(opam config env)
 
 opam depext -y conf-m4
 opam pin add travis-opam https://github.com/${fork_user}/ocaml-ci-scripts.git#${fork_branch}
+opam pin add GT https://github.com/dboulytchev/GT.git
+opam pin add ostap https://github.com/dboulytchev/ostap.git
 cp ~/.opam/$(opam switch show)/bin/ci-opam ~/
 opam remove -a travis-opam
 mv ~/ci-opam ~/.opam/$(opam switch show)/bin/ci-opam
